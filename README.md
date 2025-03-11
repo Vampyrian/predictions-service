@@ -1,4 +1,4 @@
-# Ro run in development mode
+# How to run project
 
 To install dependencies
 ```
