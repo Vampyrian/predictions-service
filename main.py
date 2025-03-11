@@ -18,7 +18,7 @@ class ImagePrompt(BaseModel):
 def read_root():
     return {"Heartbeat": "I am still alive!"}
 
-@app.post("/predict/buitine-technika-ir-elektronika")
+@app.post("/predict/image/buitine-technika-ir-elektronika")
 def read_item(data: ImagePrompt):
     image_url = data.image_url
 
