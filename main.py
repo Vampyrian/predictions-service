@@ -1,6 +1,7 @@
 import uvicorn
 from pydantic import BaseModel
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
 from transformers import pipeline
 from PIL import Image
@@ -10,6 +11,16 @@ from io import BytesIO
 classifier = pipeline("image-classification", model="Vampyrian/buitine-technika-ir-elektronika")
 
 app = FastAPI()
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # List of allowed origins, you can use ["*"] to allow all
+    allow_credentials=True,
+    allow_methods=["*"],  # Allow all HTTP methods
+    allow_headers=["*"]  # Allow all headers
+)
+
 
 class ImagePrompt(BaseModel):
     image_url: str
