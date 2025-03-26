@@ -1,0 +1,14 @@
+[Unit]
+Description=My simple prediction service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=vampyrian
+ExecStart=/bin/bash -c 'cd /home/vampyrian/App && source .venv/bin/activate && fastapi run --workers 2 main.py'
+
+[Install]
+WantedBy=multi-user.target
