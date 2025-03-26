@@ -49,3 +49,7 @@ sudo systemctl status myapp.service
 
 # How to configure SSL Caddy server
 Install caddy server
+```
+caddy adapt
+caddy start
+```
