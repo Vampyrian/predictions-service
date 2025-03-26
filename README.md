@@ -46,3 +46,6 @@ sudo systemctl enable myapp.service
 sudo systemctl start myapp.service
 sudo systemctl status myapp.service
 ```
+
+# How to configure SSL Caddy server
+Install caddy server
