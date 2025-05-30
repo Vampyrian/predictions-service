@@ -1,5 +1,8 @@
 # How to run project
-
+To activate .evenv
+```
+source .venv/bin/activate
+```
 To install dependencies
 ```
 pip install -r requirements.txt
