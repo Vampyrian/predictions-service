@@ -68,15 +68,15 @@ async def good_jwt_post():
 
 
 
-# @router.post("/jwt/log_media_mtx", tags=["jwt token"])
-# async def log_media_mtx(content: str = Body(...)):
-#
-#     safe_filename = os.path.basename('log.txt')
-#     file_path = os.path.join(safe_filename)
-#
-#     with open(file_path, 'a') as f:
-#         f.write('\n')
-#         f.write(content)
-#
-#
-#     return 'ok'
+@router.post("/jwt/log_media_mtx", tags=["jwt token"])
+async def log_media_mtx(content: str = Body(...)):
+
+    safe_filename = os.path.basename('log.txt')
+    file_path = os.path.join(safe_filename)
+
+    with open(file_path, 'a') as f:
+        f.write('\n')
+        f.write(content)
+
+
+    return 'ok'
