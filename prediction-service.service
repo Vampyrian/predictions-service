@@ -8,7 +8,7 @@ Type=simple
 Restart=always
 RestartSec=1
 User=vampyrian
-ExecStart=/bin/bash -c 'cd /home/vampyrian/App && source .venv/bin/activate && fastapi run --workers 2 main.py'
+ExecStart=/bin/bash -c 'cd /home/vampyrian/App && source .venv/bin/activate && fastapi run --workers 4 main.py'
 
 [Install]
 WantedBy=multi-user.target
