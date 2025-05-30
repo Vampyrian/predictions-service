@@ -43,11 +43,12 @@ To reload systemd settings
 ```
 sudo systemctl daemon-reload
 ```
-To run service
+All commands to control prediction-service through systemctl
 ```
-sudo systemctl enable myapp.service
-sudo systemctl start myapp.service
-sudo systemctl status myapp.service
+sudo systemctl enable prediction-service.service
+sudo systemctl start prediction-service.service
+sudo systemctl status prediction-service.service
+sudo systemctl restart prediction-service.service
 ```
 
 # How to configure SSL Caddy server
